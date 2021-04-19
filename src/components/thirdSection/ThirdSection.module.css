@@ -1,0 +1,16 @@
+.slide {
+    height: 768px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.scrollList {
+    height: 768px;
+    overflow: hidden;
+}
+
+.scrollTrack {
+    height: 768px;
+    display: flex;
+    flex-direction: row;
+}

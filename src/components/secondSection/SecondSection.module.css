@@ -1,0 +1,54 @@
+.slide {
+    height: 768px;
+    background-image: url('../../images/secondSection/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.title {
+    display: inline-block;
+    position: absolute;
+    top: 255px;
+    left: 282px;
+    font-family: 'GothamPro', sans-serif;
+    line-height: 1.2;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+.shard1 {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    width: 154px;
+    height: 218px;
+}
+
+.shard2 {
+    position: absolute;
+    top: 161px;
+    left: 82px;
+    width: 41px;
+    height: 38px;
+}
+
+.shard3 {
+    position: absolute;
+    top: 443px;
+    left: 232px;
+    width: 103px;
+    height: 102px;
+}
+
+.shard4 {
+    position: absolute;
+    top: 573px;
+    right: 226px;
+    width: 97px;
+    height: 98px;
+}

@@ -1,0 +1,25 @@
+.pagination {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 25px;
+    top: 45%;
+    margin: -4px 0;
+    z-index: 10;
+}
+
+.paginationItem {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 4px 0;
+}
+
+.active {
+    background-color: #f78b1f;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 4px 0;
+}

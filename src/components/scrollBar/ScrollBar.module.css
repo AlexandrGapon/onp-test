@@ -1,0 +1,49 @@
+* {
+    color: #fff;
+}
+
+.scrollBarContainer {
+    position: absolute;
+    bottom: 70px;
+    left: 192px;
+    width: 640px;
+    height: 14px;
+    background-color: #435063;
+    outline: none;
+    z-index: 1000;
+}
+
+.scrollBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 14px;
+    background-color: #d1eaff;
+    outline: none; 
+}
+
+.scrollBarIcon {
+    position: absolute;
+    right: -30px;
+    top: -22px;
+    width: 45px;
+    height: 55px;
+    background-image: url('../../images/scrollBar/ice.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.scrollBarSubtitle {
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    right: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'GothamPro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+.app {
+    width: 1024px;
+    height: 768px;
+    touch-action: pan-x;
+    user-select: none;
+}
+
+.sliderList {
+    overflow: hidden;
+}
+
+.sliderList .sliderTrack {
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+}

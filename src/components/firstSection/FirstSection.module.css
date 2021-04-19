@@ -1,0 +1,278 @@
+
+.slide {
+    height: 768px;
+    background-image: url('../../images/firstSection/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 90px;
+    left: 70px;
+    line-height: 1.2;
+    font-family: 'GothamPro', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #0d319c;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    height: 115px;
+    width: 100%;
+    background-image: url('../../images/firstSection/footer.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: contain;
+}
+
+.footer > span {
+    font-family: 'GothamPro', sans-serif;
+    font-size: 15px;
+    position: absolute;
+    bottom: 55px;
+    left: 475px;
+}
+
+.point1 {
+    position: absolute;
+    top: 262px;
+    left: 562px;
+}
+
+.point1 > .circle1 {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid #cf1536;
+    background-color: rgba(#ce7657, .4);
+}
+
+.point1 > .circle2 {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #cf1536;
+    animation-name: pulse2;
+    animation-delay: .8s;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point1 >.circle3 {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ce7657;
+    opacity: .7;
+    animation-name: pulse1;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point1 > span {
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    font-family: 'Lato';
+    font-size: 20px;
+    color:  #0d319c;
+    white-space: nowrap;
+}
+
+.point2 {
+    position: absolute;
+    top: 426px;
+    left: 273px;
+}
+
+.point2 > .circle1 {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #cf1536;
+    background-color: rgba(#ce7657, .4);
+}
+
+.point2 > .circle2 {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    border: 1px solid #cf1536;
+    animation-name: pulse2;
+    animation-delay: .8s;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point2 >.circle3 {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ce7657;
+    opacity: .7;
+    animation-name: pulse1;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point2 > span {
+    position: absolute;
+    top: -35px;
+    left: -45px;
+    font-family: 'Lato';
+    font-size: 20px;
+    color:  #0d319c;
+    white-space: nowrap;
+}
+
+.point3 {
+    position: absolute;
+    top: 520px;
+    left: 822px;
+}
+
+.point3 > .circle1 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #cf1536;
+    background-color: rgba(#ce7657, .4);
+}
+
+.point3 > .circle2 {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #cf1536;
+    animation-name: pulse2;
+    animation-delay: .8s;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point3 >.circle3 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ce7657;
+    opacity: .7;
+    animation-name: pulse1;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point3 > span {
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    font-family: 'Lato';
+    font-size: 20px;
+    color:  #0d319c;
+    white-space: nowrap;
+}
+
+.point4 {
+    position: absolute;
+    top: 537px;
+    left: 477px;
+}
+
+.point4 > .circle1 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #cf1536;
+    background-color: rgba(#ce7657, .4);
+}
+
+.point4 > .circle2 {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #cf1536;
+    animation-name: pulse2;
+    animation-delay: .8s;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point4 >.circle3 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ce7657;
+    opacity: .7;
+    animation-name: pulse1;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.point4 > span {
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    font-family: 'Lato';
+    font-size: 20px;
+    color:  #0d319c;
+    white-space: nowrap;
+}
+
+@keyframes pulse1 {
+    from {
+        opacity: .7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: .4;
+        transform: scale(1.8);
+    }
+}
+
+@keyframes pulse2 {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
