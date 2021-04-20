@@ -60,6 +60,14 @@ const App = () => {
         dispatch(setPosY2(posY1 - e.touches[0].clientY))
         dispatch(setPosY1(e.touches[0].clientY))
 
+        if (slideIndex === 0 && posY2 < 0) {
+            return
+        }
+
+        if (slideIndex === 2 && posY2 > 0) {
+            return
+        }
+
         setStyleTrack({
             ...styleTrack,
             transform: `translateY(${transform - posY2}px)`
