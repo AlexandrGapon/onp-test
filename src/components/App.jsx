@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setPosInit, setPosY1, setPosY2, setPosFinal, setSlideIndex } from '../reducers/sliderReducer'
+import { setSlideIndex } from '../reducers/sliderReducer'
 import style from './App.module.css'
 import FirstSection from './firstSection/FirstSection'
 import Pagination from './pagination/Pagination'
@@ -13,16 +13,17 @@ const App = () => {
     // variables
 
     const trfRegExp = /[-0-9.]+(?=px)/
+    const [posInit, setPosInit] = useState(0)
+    const [posY1, setPosY1] = useState(0)
+    const [posY2, setPosY2] = useState(0)
+    const [posFinal, setPosFinal] = useState(0)
+
     const isScrolling = useSelector(state => state.scroll.isScrolling)
-    const posInit = useSelector(state => state.slider.posInit)
-    const posY1 = useSelector(state => state.slider.posY1)
-    const posY2 = useSelector(state => state.slider.posY2)
-    const posFinal = useSelector(state => state.slider.posFinal)
     const slideIndex = useSelector(state => state.slider.slideIndex)
 
     // additional classes
-    
-    const [styleTrack, setStyleTrack] = useState({transform: 'translateY(0px)'})
+
+    const [styleTrack, setStyleTrack] = useState({ transform: 'translateY(0px)' })
 
     // functions
 
@@ -41,13 +42,14 @@ const App = () => {
             return
         }
 
-        dispatch(setPosInit(e.touches[0].clientY))
+        setPosInit(e.touches[0].clientY)
+        setPosY1(e.touches[0].clientY)
         setStyleTrack({
             ...styleTrack,
             transition: ''
         })
     }
- 
+
     // action
 
     const action = (e) => {
@@ -57,8 +59,8 @@ const App = () => {
 
         let transform = +styleTrack.transform.match(trfRegExp)
 
-        dispatch(setPosY2(posY1 - e.touches[0].clientY))
-        dispatch(setPosY1(e.touches[0].clientY))
+        setPosY2(posY1 - e.touches[0].clientY)
+        setPosY1(e.touches[0].clientY)
 
         if (slideIndex === 0 && posY2 < 0) {
             return
@@ -73,7 +75,7 @@ const App = () => {
             transform: `translateY(${transform - posY2}px)`
         })
 
-        dispatch(setPosFinal(posInit - posY1))
+
     }
 
     // end
@@ -82,6 +84,8 @@ const App = () => {
         if (isScrolling) {
             return
         }
+
+        setPosFinal(posInit - posY1)
 
         if (Math.abs(posFinal) > 150) {
             if (posInit < posY1 && +slideIndex > 0 && posInit !== posY1) {

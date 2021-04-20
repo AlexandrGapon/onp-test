@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setSlide, setIsScrolling } from '../../reducers/scrollReducer'
+import { useDispatch } from 'react-redux'
+import { setSubSlideIndex, setIsScrolling } from '../../reducers/scrollReducer'
 import style from './ScrollBar.module.css'
 
 
@@ -14,7 +14,6 @@ const ScrollBar = () => {
     const [posX1, setPosX1] = useState(0)
     const [posX2, setPosX2] = useState(0)
     const [posFinal, setPosFinal] = useState(0)
-    const test = useSelector(state => state.scroll.isScrolling)
 
     // additional classes
 
@@ -96,7 +95,7 @@ const ScrollBar = () => {
                 width: '0'
             })
 
-            dispatch(setSlide(0))
+            dispatch(setSubSlideIndex(0))
 
             return
         }
@@ -115,8 +114,8 @@ const ScrollBar = () => {
                 width: '320px'
             })
 
-            dispatch(setSlide(1))
-            
+            dispatch(setSubSlideIndex(1))
+
             return
         }
 
@@ -132,7 +131,7 @@ const ScrollBar = () => {
             width: '640px'
         })
 
-        dispatch(setSlide(2))
+        dispatch(setSubSlideIndex(2))
     }
 
     return (

@@ -9,7 +9,7 @@ import ScrollBar from '../scrollBar/ScrollBar'
 
 const ThirdSection = () => {
 
-    const slide = useSelector(state => state.scroll.slide)
+    const slideIndex = useSelector(state => state.scroll.subSlideIndex)
 
     const [styleTrack, setStyleTrack] = useState({transition: '', transform: 'translateX(-2048px)'})
 
@@ -17,9 +17,9 @@ const ThirdSection = () => {
         setStyleTrack({
             ...styleTrack,
             transition: 'transform 1s',
-            transform: `translateX(-${slide * 1024}px)`
+            transform: `translateX(-${slideIndex * 1024}px)`
         })
-    }, [slide])
+    }, [slideIndex])
 
     return (
         <div className={style.slide}>
