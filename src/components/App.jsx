@@ -13,6 +13,7 @@ const App = () => {
     // variables
 
     const trfRegExp = /[-0-9.]+(?=px)/
+    const isScrolling = useSelector(state => state.scroll.isScrolling)
     const posInit = useSelector(state => state.slider.posInit)
     const posY1 = useSelector(state => state.slider.posY1)
     const posY2 = useSelector(state => state.slider.posY2)
@@ -36,6 +37,10 @@ const App = () => {
     // start
 
     const start = (e) => {
+        if (isScrolling) {
+            return
+        }
+
         dispatch(setPosInit(e.touches[0].clientY))
         setStyleTrack({
             ...styleTrack,
@@ -46,6 +51,9 @@ const App = () => {
     // action
 
     const action = (e) => {
+        if (isScrolling) {
+            return
+        }
 
         let transform = +styleTrack.transform.match(trfRegExp)
 
@@ -63,6 +71,9 @@ const App = () => {
     // end
 
     const end = (e) => {
+        if (isScrolling) {
+            return
+        }
 
         if (Math.abs(posFinal) > 150) {
             if (posInit < posY1 && +slideIndex > 0 && posInit !== posY1) {
